@@ -1,4 +1,4 @@
-package com.example.dubboservice.model.po;
+package com.example.dubboservice.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

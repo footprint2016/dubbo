@@ -1,33 +1,5 @@
-server:
-  port: 7600
-
 spring:
+  profiles:
+    active: @profileActive@
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/cloud?allowMultiQueries=true&useUnicode=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 123456
-
-# mybatis-plus
-mybatis-plus:
-  mapper-locations: com.example.demo.dao.mapper/*Mapper.xml
-  type-aliases-package: com.example.demo.model.po
-
-# dubbo
-dubbo:
-  application:
-    name: demoService
-  protocol:
-    name: dubbo
-    port: 20880
-  registry:
-    address: zookeeper://127.0.0.1:2181
-  scan:
-    base-packages: com.example.dubbofacade.application # 引用服务扫描的路径
-
-# log
-logging:
-  level:
-    com.example.dubboservice: DEBUG
-  file: D:\logs\dubbo-service.log
-

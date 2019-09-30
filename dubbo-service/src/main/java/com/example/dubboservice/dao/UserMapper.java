@@ -1,7 +1,7 @@
 package com.example.dubboservice.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.dubboservice.model.po.User;
+import com.example.dubboservice.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

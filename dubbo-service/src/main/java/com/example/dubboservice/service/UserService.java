@@ -6,9 +6,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.dubbocommon.resp.RespObject;
 import com.example.dubbofacade.application.UserApplication;
 import com.example.dubboservice.dao.UserMapper;
-import com.example.dubboservice.model.po.User;
+import com.example.dubboservice.model.User;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Map;
 
 /**
  * Function description
@@ -46,8 +48,8 @@ public class UserService implements UserApplication {
 //        List<User> userList = userMapper.selectList(new LambdaQueryWrapper<User>().select());
 //        respObject.setData(userList);
 
-        IPage<User> page = userMapper.selectPage(new Page<>(0, 5), new QueryWrapper<>());
-//        IPage<Map<String, Object>> page = userMapper.selectMapsPage(new Page<>(0, 2), new QueryWrapper<>());
+//        IPage<User> page = userMapper.selectPage(new Page<>(0, 5), new QueryWrapper<>());
+        IPage<Map<String, Object>> page = userMapper.selectMapsPage(new Page<>(0, 2), new QueryWrapper<>());
         respObject.setData(page);
         return respObject;
     }
