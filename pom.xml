@@ -15,9 +15,11 @@
     <version>${dubbo.version}</version>
     <modules>
         <module>dubbo-facade</module>
-        <module>dubbo-service</module>
+        <module>dubbo-service-a</module>
+        <module>dubbo-service-b</module>
         <module>dubbo-web</module>
         <module>dubbo-common</module>
+        <module>dubbo-model</module>
     </modules>
 
     <properties>
@@ -26,13 +28,16 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <!--   modules version     -->
         <dubbo.version>1.0-SNAPSHOT</dubbo.version>
-        <dubbo-service.version>1.0-SNAPSHOT</dubbo-service.version>
+        <dubbo-service-a.version>1.0-SNAPSHOT</dubbo-service-a.version>
+        <dubbo-service-b.version>1.0-SNAPSHOT</dubbo-service-b.version>
         <dubbo-app.version>1.0-SNAPSHOT</dubbo-app.version>
+        <dubbo-model.version>1.0-SNAPSHOT</dubbo-model.version>
         <dubbo-facade.version>1.0-SNAPSHOT</dubbo-facade.version>
         <dubbo-web.version>1.0-SNAPSHOT</dubbo-web.version>
         <dubbo-common.version>1.0-SNAPSHOT</dubbo-common.version>
         <!--   jar version     -->
         <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
+        <druid.version>1.1.20</druid.version>
         <mysql.version>8.0.17</mysql.version>
         <dubbo-spring-boot-starter.version>2.7.3</dubbo-spring-boot-starter.version>
         <zookeeper.version>3.4.12</zookeeper.version>
@@ -62,7 +67,7 @@
 <!--            <dependency>-->
 <!--                <groupId>com.alibaba</groupId>-->
 <!--                <artifactId>druid-spring-boot-starter</artifactId>-->
-<!--                <version>1.1.20</version>-->
+<!--                <version>${druid.version}</version>-->
 <!--            </dependency>-->
             <dependency>
                 <groupId>mysql</groupId>
@@ -85,6 +90,16 @@
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-framework</artifactId>
                 <version>${curator.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>netty</artifactId>
+                        <groupId>io.netty</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.apache.curator</groupId>

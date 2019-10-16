@@ -1,4 +1,4 @@
-package com.example.dubboweb.controller;
+package com.example.dubboservicea.controller;
 
 import com.example.dubbocommon.resp.RespObject;
 import com.example.dubbofacade.application.a.UserApplication;
@@ -12,17 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
  * Function description
  *
  * @Author: Vampire-潘伟
- * @Data: 2019/9/12 19:22
+ * @Data: 2019/9/10 18:14
  */
 @RestController
 @RequestMapping("/")
-public class WebController {
-    private static final Logger LOGGER = LoggerFactory.getLogger(WebController.class);
+public class DemoController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(DemoController.class);
 
     @Reference
-    UserApplication useraApplication;
-    @Reference
-    com.example.dubbofacade.application.b.UserApplication userbApplication;
+    UserApplication userApplication;
 
     @RequestMapping("demo")
     private String demo() {
@@ -30,8 +28,8 @@ public class WebController {
         return "hello springboot...";
     }
 
-    @RequestMapping("a-crud")
-    public RespObject acrud() {
+    @RequestMapping("crud")
+    private RespObject crud() {
         RespObject respObject = new RespObject();
 //        1. insert:
 //        for (int i = 0; i < 20; i++) {
@@ -41,28 +39,7 @@ public class WebController {
 //            userService.insert(user);
 //        }
 //        2. select
-        respObject = useraApplication.selectBy();
-//        3. update
-//        int id = userService.updateBy();
-//        respObject.setData(id);
-//        4. delete
-//        int id = userService.deleteBy();
-//        respObject.setData(id);
-        return respObject;
-    }
-
-    @RequestMapping("b-crud")
-    public RespObject bcrud() {
-        RespObject respObject = new RespObject();
-//        1. insert:
-//        for (int i = 0; i < 20; i++) {
-//            User user = new User();
-//            user.setName("aaa" + i);
-//            user.setAge(20 + i);
-//            userService.insert(user);
-//        }
-//        2. select
-        respObject = userbApplication.selectBy();
+        respObject = userApplication.selectBy();
 //        3. update
 //        int id = userService.updateBy();
 //        respObject.setData(id);

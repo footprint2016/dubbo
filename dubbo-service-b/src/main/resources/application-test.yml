@@ -1,0 +1,32 @@
+server:
+  port: 7701
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cloud?allowMultiQueries=true&useUnicode=true&autoReconnect=true&failOverReadOnly=false&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+# mybatis-plus
+mybatis-plus:
+  mapper-locations: com.example.dubboserviceb.dao.mapper/*Mapper.xml
+  type-aliases-package: com.example.dubbomodel.model.entity
+
+# dubbo
+dubbo:
+  application:
+    name: provider-b
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.example.dubbofacade.application.b # 引用服务扫描的路径
+
+# log
+logging:
+  level:
+    com.example.dubboserviceb: DEBUG
+  file: D:\logs\dubbo-serviceb.log
+

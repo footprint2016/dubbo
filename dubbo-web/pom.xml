@@ -21,6 +21,11 @@
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
+            <artifactId>dubbo-model</artifactId>
+            <version>${dubbo-model.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
             <artifactId>dubbo-facade</artifactId>
             <version>${dubbo-facade.version}</version>
         </dependency>
@@ -33,6 +38,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>

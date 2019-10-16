@@ -20,6 +20,11 @@
             <artifactId>dubbo-common</artifactId>
             <version>${dubbo-common.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>dubbo-model</artifactId>
+            <version>${dubbo-model.version}</version>
+        </dependency>
     </dependencies>
 
 

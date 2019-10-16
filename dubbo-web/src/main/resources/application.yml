@@ -4,7 +4,7 @@ server:
 #dubbo
 dubbo:
   application:
-    name: demoService
+    name: consumer
   protocol:
     name: dubbo
     port: 20880
