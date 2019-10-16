@@ -1,5 +1,0 @@
-com\example\dubboservice\config\MybatisPlusConfig.class
-com\example\dubboservice\ServiceApplication.class
-com\example\dubboservice\service\UserService.class
-com\example\dubboservice\model\po\User.class
-com\example\dubboservice\dao\UserMapper.class
