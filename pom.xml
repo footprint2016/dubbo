@@ -22,7 +22,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring-boot-starter.version>2.1.8.RELEASE</spring-boot-starter.version>
+        <spring-boot-starter.version>2.5.12</spring-boot-starter.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <!--   modules version     -->
         <dubbo.version>1.0-SNAPSHOT</dubbo.version>
