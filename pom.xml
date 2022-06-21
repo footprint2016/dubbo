@@ -33,7 +33,7 @@
         <dubbo-common.version>1.0-SNAPSHOT</dubbo-common.version>
         <!--   jar version     -->
         <mybatis-plus-boot-starter.version>3.2.0</mybatis-plus-boot-starter.version>
-        <mysql.version>8.0.17</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <dubbo-spring-boot-starter.version>2.7.3</dubbo-spring-boot-starter.version>
         <zookeeper.version>3.4.12</zookeeper.version>
         <curator.version>2.13.0</curator.version>
